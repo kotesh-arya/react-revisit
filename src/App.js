@@ -54,15 +54,17 @@ function Form() {
   const [lastName, setLastName] = useState("");
   console.log("I am rendered");
   // 🔴 Avoid: a)redundant state and b)unnecessary Effect
-  let fullName = `${firstName} ${lastName}`;
-  // const [fullName, setFullName] = useState("");
+  // const [fullName, setFullName] = useState(""); // when the component rendered with either firstName/lastName variable update,
+  // console.log(fullName); // then fullName will hold the emptystring initial value
+
   // useEffect(() => {
-  //   setFullName(firstName + " " + lastName);
+    // setFullName(firstName + " " + lastName); // when useEffect runs due to firstName/lastName changed, then there will be the next render with the updated value for fullName.
   // }, [firstName, lastName]);
-  let sampleString = "kgdnlksdan";
-  useMemo(() => {
-    console.log("function from useMemo is running");
-  }, [fullName]);
+  // 🔴 Avoid: a)redundant state and b)unnecessary Effect
+
+  // ✅️ Use a variable that stores the calculation(concatenation) done during right at the RENDERING PHASE
+  let fullName = `${firstName} ${lastName}`;  // on every update of either firstName or lastName the component gets re-rendered. So, during that rendering/processing/preparing information to be committed and shown on the screen, this fullName processing also can be done during rendering only and we can happily use that Latest/correct value of the fullName variable.
+
   return (
     <div>
       <form>
@@ -153,4 +155,3 @@ function ExampleComponent() {
     </>
   );
 }
-
