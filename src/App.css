@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .container{
+  width: 200px;
+
+} */
+
+/* .container {
+  background-color: #ffffcc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 500px; 
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.profile-container {
+  background-color: #ffffcc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 500px; 
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust height if needed */
+}
+
+.profile {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+}
+
+.profile-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.profile-comment {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.profile-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background-color: #0056b3;
 }
